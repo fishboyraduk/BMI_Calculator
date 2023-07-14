@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const fs = require('fs');
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.set('views', 'views');
 app.set('view engine', 'hbs');
@@ -31,4 +31,4 @@ app.get('/', function (request, response){
 });
 
 app.listen(port);
-console.log('server is listenning on port 3000');
+console.log(`server is listenning on port ${port}`);
