@@ -15,8 +15,7 @@ jobs:
   steps:
   - uses: actions/checkout@v3
   - name: Invoke deployment hook
-    uses: distributhor/workflow-webhook@v2
-    
+    uses: distributhor/workflow-webhook@v2    
     env:
       webhook_url: ${{secrets.DEPLOY_HOOK_URL}}
       webhook_secret: ${{secrets.DEPLOY_HOOK_KEY}} 
@@ -29,4 +28,4 @@ jobs:
      retries: 20
      wait: 16000
      sleep: 30000
-#comment
+#comment2
