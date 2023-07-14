@@ -14,11 +14,11 @@ jobs:
 
   steps:
   - uses: actions/checkout@v2
-
+    with:
+     node-version: "16"
   - name: Invoke deployment hook
     uses: distributhor/workflow-webhook@v2
-    with:
-      node-version: "16"
+    
     env:
       webhook_url: ${{secrets.DEPLOY_HOOK_URL}}
       webhook_secret: ${{secrets.DEPLOY_HOOK_KEY}}
